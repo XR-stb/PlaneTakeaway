@@ -1,0 +1,41 @@
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+ 
+<!--全部订单-->
+<view hidden="{{currentTab!==0}}">
+  <!-- <view class="dindang">
+    <view class="left">
+        <view class="chose">
+            <checkbox/>
+            <view>梦想水果乐商家</view>
+        </view>
+        <image src="../../images/good.jpg"></image>
+    </view>
+    <view class="right">
+        <view class="name">小鸡炖蘑菇</view>
+        <view class="line"></view>
+        <view class="bottom">
+            <view class="add">
+                <view class="price">￥99.99</view>
+                <view class='stepper'>
+                    <text class='{{minusStatus}}' type='number'  bindtap='bindMinus'>-</text>
+                    <input bindinput='bindManual' value='{{num}}'></input>
+                    <text bindtap='bindPlus'>+</text>
+                </view>
+            </view>
+        </view>
+    </view>
+  </view> -->
+</view>
+ 
+<!--待评价-->
+<view hidden="{{currentTab!==1}}">
+  tab_02
+</view>
+ 
+<!--退款-->
+<view hidden="{{currentTab!==2}}">
+  tab_03
+</view>

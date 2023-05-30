@@ -1,0 +1,154 @@
+page{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: rgb(241,242,246);
+  }
+  .navbar{
+    flex: none;
+    display: flex;
+    background: #fff;
+  }
+  .navbar .item{
+    position: relative;
+    flex: auto;
+    text-align: center;
+    line-height: 80rpx;
+  }
+  .navbar .item.active{
+    color: #0c8f33;
+  }
+  .navbar .item.active:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4rpx;
+    background: #11994e;
+  }
+
+  .dindang{
+      padding-top: 30rpx;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 300rpx;
+      background: white;
+      margin-top: 20rpx;
+      justify-content: space-between;
+  }
+  .left{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30rpx;
+  }
+  .chose{
+      display: flex;
+      flex-direction: row;
+  }
+
+  .left image{
+      margin-top: 20rpx;
+      width: 220rpx;
+      height: 200rpx;
+  }
+
+  .right{
+    display: flex;
+    flex-direction: column;
+    margin-right: 0rpx;
+    margin-top: 0rpx;
+  }
+
+  .name{
+      font-size: 40rpx;
+      color: rgb(145, 132, 18);
+  }
+
+  .bottom{
+      display: flex;
+      flex-direction: row;
+      margin-top: 60rpx;
+  }
+  .line{
+    width: 350rpx;
+    border-bottom: 2rpx solid #ebebeb;
+    margin-top: 50rpx;
+  }
+  .count{
+      margin-right: 100rpx;
+      color: rgb(228, 163, 25);
+      font-size: 40rpx;
+  }
+
+  .add{
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: row;
+  }
+  .price{
+    color: tomato;
+    font-size: 38rpx;
+    font-weight: 700;
+  }
+  checkbox .wx-checkbox-input {
+    width: 36rpx;
+    height: 36rpx;
+    border-radius: 50%;
+    border-color: #22a112;
+    vertical-align: middle;
+  }
+  /*checkbox选中后样式  */
+  checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background:#2ee072;
+  }
+  /*checkbox选中后图标样式  */
+  checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 28rpx;
+    text-align: center;
+    font-size: 22rpx;
+    color: #ffffff;
+    background: transparent;
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+  }
+
+  /*主容器*/
+.stepper {
+    width:80px;
+    height:26px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-left: 20rpx;
+  }
+  /*加号和减号*/
+  .stepper text {
+    float: left;
+    width: 19px;
+    line-height: 26px;
+    text-align: center;
+  }
+  /*数值*/
+  .stepper input {
+    width: 40px;
+    height: 26px;
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  /*普通样式*/
+  .stepper .normal {
+    color:black;
+  }
+  /*禁用样式*/
+  .stepper .disable {
+    color: #ccc;
+  }

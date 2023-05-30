@@ -1,0 +1,28 @@
+<view class="type-box">
+    <!-- 商品分类 -->
+    <scroll-view scroll-y class="type-left">
+        <block wx:for="{{typeList}}" wx:key="{{index}}">
+            <view bindtap="getTypeGoodsList" data-id="{{item._id}}" data-index="{{index}}" class="{{currentType==index?'choose-type':''}}">{{item.title}}</view>
+        </block>
+    </scroll-view>
+    <!-- 对应商品 -->
+    <scroll-view scroll-y>
+        <block wx:for="{{goodsList}}" wx:key="index" data-id="{{item._id}}">
+            <view class="type-good-box">
+                <image src="{{item.good_img}}" mode="aspectFill" class="good-img" bindtap="jump" data-id="{{item._id}}"></image>
+                <view class="type-good-right">
+                    <view class="good-title" bindtap="jump" data-id="{{item._id}}">{{item.good_name}}</view>
+                    <view class="good-sales-num" bindtap="jump" data-id="{{item._id}}">销量：{{item.sales_cnt}}</view>
+                    <view class="choose-box">
+                        <view class="price" bindtap="jump" data-id="{{item._id}}">￥{{item.price}}</view>
+                        <view class="choose-num-box">
+                            <image src="../../images/sub.png"></image>
+                            <view class="good-num">1</view>
+                            <image src="../../images/add.png" bindtap="addCart" data-id="{{item._id}}"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>

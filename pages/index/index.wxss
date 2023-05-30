@@ -1,0 +1,185 @@
+/* pages/index/index.wxss */
+.container-bgcolor{
+    background-color: #F98F2E;
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 22rpx;
+    background-color: #f6f6f6;
+    border-radius: 40rpx 40rpx 0 0;
+}
+
+.topSearch{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(226, 224, 222);
+    border-radius: 50rpx;
+    margin-top: 30rpx;
+    border: 3rpx solid #ebebeb;
+}
+
+.topSearch image{
+    margin: 15rpx 20rpx;
+}
+
+.topSearch input{
+    margin: 10rpx 10rpx;
+}
+.msgWrap{
+    width: 100%;
+    height: 50rpx;
+    margin-top: 15rpx;
+    color: rgb(105, 104, 104);
+    font-size: 28rpx;
+    text-align: center;
+    align-items: center;
+    /* border: 2rpx solid #eeeaea; */
+    letter-spacing: 2rpx;
+}
+
+.foodSwip{
+    margin-top: -15rpx;
+    padding: 30rpx 0rpx;
+}
+
+.container swiper{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20rpx;
+    height: 400rpx;
+}
+
+swiper image{
+    width: 100%;
+    border-radius: 16rpx;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    /*wrap 自动换行 */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color:  #fff;
+    border-radius: 16rpx;
+    border: 5rpx solid #ebebeb;
+}
+
+.nav .menu { /*注意这里的选择器 */
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10rpx;
+    margin-top: 20rpx;
+}
+
+.nav .menu navigator{ /*注意这里的选择器 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu text{
+    color: #607D8B;
+    margin-bottom: 5rpx;
+    font-size: 30rpx;
+}
+.menu image{
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50%;
+}
+
+.hot{
+    display: block;
+    text-align: center;
+    flex-wrap: wrap;
+    color:   black;
+    margin: 30rpx;
+    color: orangered;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20rpx 20rpx;
+    background-color: white;
+    border-radius: 16rpx;
+    border: 3rpx solid #ebebeb;
+}
+
+navigator{
+    width: 100%;
+    height: 100%;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 330rpx;
+    margin: 10rpx 10rpx;
+    /* align-items: center; */
+    color: #607D8B;
+    /* padding: 6rpx; */
+    background-color: white;
+    /* justify-content: center; */
+    /* border: 5rpx solid #ebebeb; */
+    border-radius: 10rpx;
+
+}
+
+.product image{
+    width: 100%;
+    border-radius:10rpx 10rpx 0 0;
+}
+
+.info{
+    width: 100%;
+    height: 130rpx;
+    border: 2rpx solid #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pro_name{
+    margin-top: 15rpx;
+    margin-left: 36rpx;
+    font-size: 30rpx;
+    word-spacing: normal;
+    color: rgb(179, 20, 9);
+    /* 防止商品名文字溢出 */
+    width: 330rpx;
+    height: 40rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.info-price{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 25rpx;
+    margin-left: 20rpx;
+    line-height: 30rpx;
+}
+
+.cnt{
+    font-size: 26rpx;
+    margin-left: 60rpx;
+}
+
+.price{
+    color: #f32222;
+    font-size: 34rpx;
+}

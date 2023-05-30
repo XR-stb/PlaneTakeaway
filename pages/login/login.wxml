@@ -1,0 +1,26 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+    <view class="info">
+        <image src="/images/phd.jpg"></image>
+        <text>去登录</text>
+    </view>
+    <view class="func">
+        <view class="title">常用功能</view>
+        <view class="mybox">
+            <view class="entity" wx:for="{{usuallyList}}" wx:key="index" bindtap="jumpTo" data-pgurl='../test/test'>
+                <image src="{{item.url}}"></image>
+                <view class="myfont">{{item.name}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="func">
+        <view class="title">更多服务</view>
+        <view class="mybox">
+            <view class="entity" wx:for="{{serviceList}}" wx:key="index" bindtap="jumpTo" data-pgurl='../test/test'>
+                <image src="{{item.url}}"></image>
+                <view class="myfont">{{item.name}}</view>
+            </view>
+        </view>
+    </view>
+    
+</view>

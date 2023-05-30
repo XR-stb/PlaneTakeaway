@@ -1,0 +1,59 @@
+<!--pages/index/index.wxml-->
+<view class="container-bgcolor">
+    <view class="container">
+        <view class="topSearch">
+            <image src="/images/search.png" style="height: 45rpx; width: 45rpx;"></image>
+            <input type="text" 	bindfocus="toSearch" placeholder="今天想吃点什么" />
+        </view>
+        
+       <view class="msgWrap">
+            <swiper autoplay vertical="true" circular="true" interval="3000">
+                <block wx:for="{{msgList}}" wx:key="index">
+                    <swiper-item>
+                        <view>{{item.title}}</view>
+                    </swiper-item>
+                </block>
+            </swiper>
+       </view>
+
+        <view class="foodSwip">
+            <!-- 自动5s滚动，默认true，所以可以不写，循环滚动 -->
+            <swiper autoplay circular="true" interval="3000" indicator-dots='true'>
+                <block wx:for="{{swiperList}}" wx:key="index">
+                     <swiper-item>
+                        <navigator url="../shopping/shopping" open-type="switchTab">
+                            <image src="{{item.swp_img}}"></image>
+                        </navigator>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+
+        <!-- 菜单栏导航 -->
+        <view class="nav">
+            <view class="menu" wx:for="{{navList}}" wx:key="index" bindtap="jumpType" data-index="{{item.index}}" data-id="{{item._id}}">
+                <!-- <navigator url="../shop/shop" open-type="navigate"> -->
+                    <image src="{{item.type_img}}"></image>
+                    <text>{{item.title}}</text>
+                <!-- </navigator> -->
+             </view>
+        </view>
+
+        <!-- 产品列表 -->
+        <text class="hot"> 热卖产品</text>
+        <view class="wrap">
+            <view class="product" wx:for="{{productList}}" wx:key="index" bindtap="jump" data-id="{{item._id}}">
+                <!-- <navigator url="../details/details" open-type="navigate" data-id="item._id"> -->
+                    <image src="{{item.good_img}}" mode="heightFix widthFix"></image>
+                    <view class="info">
+                        <text class="pro_name" space="ensp"> {{item.good_name}} </text>
+                        <view class="info-price">
+                            <view class="price"> ￥{{item.price}} </view>
+                            <view class="cnt">销量:{{item.sales_cnt}}</view>
+                        </view>  
+                    </view>
+                <!-- </navigator> -->
+            </view>
+        </view> <!-- wrap -->
+    </view>
+</view>

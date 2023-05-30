@@ -1,0 +1,59 @@
+
+
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+ 
+<!--全部订单-->
+<view hidden="{{currentTab!==0}}" class="orders">  
+    <view wx:if="{{cartList.length == 0}}" class="empty">
+        <image src="../../images/empty.jpg" mode="widthFix"></image>
+    </view>
+    <scroll-view scroll-y>
+        <view class="container">
+            <block wx:for="{{cartList}}" wx:key="index" data-id="{{item._id}}">
+                <view class="good-box">
+                    <image src="../../images/choose.png" class="choose-img"></image>
+                    <image src="{{item.good_img}}" class="good-img" mode="aspectFill"></image>
+                    <view class="good-right">
+                        <view>{{item.good_name}}</view>
+                        <view class="detail">{{item.detail}}</view>
+                        <view class="choose-box">
+                            <view class="price">￥{{item.price}}</view>
+                            <view class="choose-num-box">
+                                <image src="../../images/sub.png" bindtap="subOne" data-id="{{item._id}}"></image>
+                                <view class="good-num">{{item.counts}}</view>
+                                <image src="../../images/add.png" bindtap="addOne" data-id="{{item._id}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+            <!-- 填充底部增加距离 -->
+            <view style="height: 100rpx;"></view>
+            
+        </view>
+    </scroll-view>
+    <view class="cartCard">
+        <view class="wrapBlock">
+            <image src="../../images/choose.png"></image>
+            <view class="allChoose">全选</view>
+            <block>
+                <view class="total-font">合计:</view>
+                <view class="total-price">￥{{total}}</view>
+                <view class="settlement">结算</view>
+            </block>
+        </view>
+    </view>
+</view>
+
+<!--待评价-->
+<view hidden="{{currentTab!==1}}">
+  tab_02
+</view>
+ 
+<!--退款-->
+<view hidden="{{currentTab!==2}}">
+  tab_03
+</view>
